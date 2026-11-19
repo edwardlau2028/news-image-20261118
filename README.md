@@ -1,57 +1,34 @@
 # The World in One Day — 18 November 2026
 
-[![make.fun](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
-[![rank](https://make.fun/badge/news-image-20261118/edwardlau2028/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
-[![reward](https://make.fun/badge/news-image-20261118/edwardlau2028/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
-[![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![make.fun](https://img.shields.io/badge/make.fun-news--image--20261118-blue)](https://make.fun/c/news-image-20261118)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-An entry for the make.fun competition
-[news-image-20261118](https://make.fun/c/news-image-20261118):
-one 1024×1024 image that sums up the world news of
-**Wednesday, 18 November 2026**.
+A newspaper-style front page summing up the world news of **Wednesday, 18 November 2026** — eight stories from eight beats, drawn entirely in code with Python and Pillow.
 
-## The image
+## The eight stories
 
-`entry.png` is a newspaper-style front page drawn in code
-(`draw_news.py`, Python + PIL, system fonts only — no AI image
-generator, so every headline is pixel-accurate text). It covers the
-day's eight biggest stories, across regions and beats:
+1. **Middle East** — U.S. sinks five Iranian tankers. Iran fires missiles at a U.S. base in Jordan and ships near Hormuz; oil tops $100.
+2. **Politics** — Peltola wins Alaska Senate seat. Democrat beats Dan Sullivan; Democrats take a 56–44 Senate majority.
+3. **Russia** — Russian military plane crashes in Siberia. An-12 transport goes down near Kemerovo; all 19 aboard killed.
+4. **Weather** — Category 5 Cyclone Xavier hits Cook Islands. Gusts reach 315 km/h; wharves damaged on Manihiki, no deaths reported.
+5. **Asia** — North Korea fires missile toward the sea. Seoul says a ballistic missile flew toward the Sea of Japan amid border tensions.
+6. **Europe** — Deep 5.3 quake rattles Romania. Felt in Bucharest and Ukraine; no major damage reported.
+7. **Americas** — U.S. report traces $12bn in Venezuelan oil revenue. 53-page State Department report details funds handled since Maduro's capture.
+8. **Diplomacy** — Four nations urge Israel to let aid into Gaza. Australia, Canada, Italy and the UK call for open aid access as floods worsen.
 
-1. **Middle East** — the U.S. sinks five Iranian tankers, after Iran
-   fires missiles at a U.S. base in Jordan and ships near Hormuz;
-   oil tops $100.
-2. **Politics** — Peltola wins the Alaska Senate seat; Democrats take
-   a 56–44 Senate majority.
-3. **Russia** — a Russian military An-12 transport crashes in Siberia
-   near Kemerovo; all 19 aboard killed.
-4. **Weather** — Category 5 Cyclone Xavier hits the Cook Islands,
-   with gusts of 315 km/h; wharves damaged on Manihiki, no deaths
-   reported.
-5. **Asia** — North Korea fires a ballistic missile toward the Sea of
-   Japan amid border tensions.
-6. **Europe** — a deep magnitude 5.3 earthquake rattles Romania,
-   felt in Bucharest and Ukraine.
-7. **Americas** — a U.S. State Department report traces $12bn in
-   Venezuelan oil revenue handled since Maduro's capture.
-8. **Diplomacy** — Australia, Canada, Italy and the UK urge Israel to
-   let aid into Gaza as floods worsen suffering.
-
-Sources are credited in the image footer: Al Jazeera, Reuters, AP,
-MetService, The Paris Eye, The Munich Eye, USGS.
+Sources: Al Jazeera · Reuters · AP · MetService · The Paris Eye · The Munich Eye · USGS. All events happened, or were first reported, on 18 November 2026.
 
 ## How it runs
 
-`main.ts` (Node 22, standard library only) copies `entry.png` to
-`$MAKEFUN_OUTPUT_DIR/entry.png` (default `/output`):
+`draw_news.py` draws the 1024×1024 front page (`entry.png`) with PIL — navy masthead, a 2×4 grid of story cards with tag chips, serif headlines and short summaries, and a sources footer. The drawing program wraps text greedily and asserts that no headline exceeds 3 lines, no summary exceeds 2 lines, and nothing overflows its card.
+
+`main.ts` (Node 22, standard library only) copies `entry.png` to `$MAKEFUN_OUTPUT_DIR/entry.png` (default `/output`):
 
 ```sh
+python3 draw_news.py
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-To redraw the image from scratch: `python3 draw_news.py`
-(requires Pillow and the Noto fonts; it asserts that no headline or
-summary overflows its card).
-
 ## Repository
 
-GitHub: [edwardlau2028/news-image-20261118](https://github.com/edwardlau2028/news-image-20261118)
+https://github.com/edwardlau2028/news-image-20261118
