@@ -1,6 +1,8 @@
 # The World in One Day — 18 November 2026
 
-[![make.fun](https://img.shields.io/badge/make.fun-news--image--20261118-blue)](https://make.fun/c/news-image-20261118)
+[![make.fun · news-image-20261118](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![rank](https://make.fun/badge/news-image-20261118/edwardlau2028/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![reward](https://make.fun/badge/news-image-20261118/edwardlau2028/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A newspaper-style front page summing up the world news of **Wednesday, 18 November 2026** — eight stories from eight beats, drawn entirely in code with Python and Pillow.
